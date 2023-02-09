@@ -9,16 +9,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Title Screen.unity
     guid: 2700c2b4016741949930a0f27c96b1b7
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
+    path: Assets/Scenes/Tutorial/Tutorial.unity
     guid: 5e7de87f98f9dd647a4befd24527079f
   - enabled: 1
-    path: Assets/Scenes/ROD.unity
+    path: Assets/Scenes/ROD/ROD.unity
     guid: 20e1389dfedbcf34abd791dfae5bf9cd
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Level1/Level1.unity
     guid: 8d63441a398ba7c4d8335495a1da481d
   - enabled: 1
-    path: Assets/Scenes/bossLevel.unity
+    path: Assets/Scenes/bossLevel/bossLevel.unity
     guid: 04c346a38b805444db1659af0515d3bb
   - enabled: 1
     path: Assets/Scenes/You Died Screen.unity

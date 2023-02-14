@@ -32,7 +32,7 @@ public class PlayerHp : MonoBehaviour
 
         }
 
-        if (hp != hpNorm)
+        if (hp != hpNorm && hp != 0)
         {
             CheckHp();
             AngelBood.Play();

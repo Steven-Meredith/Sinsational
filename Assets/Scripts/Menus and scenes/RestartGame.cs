@@ -9,7 +9,16 @@ public class RestartGame : MonoBehaviour
     public GameObject DeathScreen;
     public void Restart()
     {
-        SceneManager.LoadScene("ROD");
+        if (SceneChecker.curLevel == "SlothLevel1")
+        {
+            SceneManager.LoadScene("SlothLevel1");
+            
+        }
+        else if(SceneChecker.curLevel == "ROD")
+        {
+            SceneManager.LoadScene("ROD");
+            
+        }
         PlayerHp.ResetPlayer(5);
     }
     public void MainMenu()

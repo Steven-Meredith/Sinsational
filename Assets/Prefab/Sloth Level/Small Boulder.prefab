@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2393659437928056682}
   m_Layer: 14
   m_Name: Small Boulder
-  m_TagString: Big Boulder
+  m_TagString: damage obj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -10,14 +10,14 @@ public class PlayerHp : MonoBehaviour
     [SerializeField] BoxCollider box;
     [SerializeField] ParticleSystem AngelBood;
     [SerializeField] List<Image> UIHealth;
-     int hpNorm = hp;
+    int hpNorm = hp;
     Transform tempSpawn;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -42,7 +42,7 @@ public class PlayerHp : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+
         if (collision.collider.tag == "damage obj")
         {
             hp--;
@@ -54,7 +54,7 @@ public class PlayerHp : MonoBehaviour
             DamagePlayer(1);
             TeleportSpawn();
         }
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -63,14 +63,14 @@ public class PlayerHp : MonoBehaviour
         {
             hp = hp - 2;
 
-            
+
 
         }
         else if (other.tag == "damage obj")
         {
             hp--;
 
-            
+
         }
         else if (other.tag == "Temp Spawn")
         {
@@ -87,8 +87,8 @@ public class PlayerHp : MonoBehaviour
     public static void DamagePlayer(int dam)
     {
         hp = hp - dam;
-        
-        
+
+
     }
 
     void TeleportSpawn()
@@ -96,8 +96,8 @@ public class PlayerHp : MonoBehaviour
         transform.position = tempSpawn.position;
     }
 
-    
-    
+
+
 
     public static void ResetPlayer(int resetHP)
     {
@@ -106,7 +106,7 @@ public class PlayerHp : MonoBehaviour
 
     public void CheckHp()
     {
-        
+
         for (int i = 0; i < UIHealth.Count; i++)
         {
             UIHealth[i].enabled = false;
@@ -118,5 +118,5 @@ public class PlayerHp : MonoBehaviour
 
     }
 
-    
+
 }

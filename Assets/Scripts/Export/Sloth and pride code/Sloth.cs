@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Animations;
 
 public class Sloth : MonoBehaviour
 {
@@ -14,9 +15,10 @@ public class Sloth : MonoBehaviour
     public float shootTime = 2f;
     public float scatterRange = 45f;
     public float shockwaveLifetime = 5f;
+    Animator anim;
     
 
-    
+
 
     public float hp = 10f;
 
@@ -30,7 +32,8 @@ public class Sloth : MonoBehaviour
     void Start()
     {
         playerTransform = GameObject.FindWithTag("Player").transform; // Find the players position
-
+        anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -38,12 +41,13 @@ public class Sloth : MonoBehaviour
     {
         if (Time.time > shootTime)
         {
-            
-            Shoot();
             shootTime = Time.time + 2f;
+            anim.SetBool("attack", true);
+            anim.SetBool("idle", false);
+            
         }
+        this.transform.LookAt(playerTransform);
 
-       
     }
 
     public void Shoot()
@@ -56,7 +60,10 @@ public class Sloth : MonoBehaviour
                 // shockwave
                 // Calculate the direction to the player
                 Vector3 waterDirection = playerTransform.position - this.transform.position;
-                waterDirection.Normalize(); 
+                waterDirection.Normalize();
+                //set the animation back to idle
+                anim.SetBool("attack", false);
+                anim.SetBool("idle", true);
 
                 // Create and throw the projectile
                 GameObject Shock = Instantiate(shockwaveProjectile, this.transform.position, Quaternion.identity);
@@ -78,7 +85,10 @@ public class Sloth : MonoBehaviour
                 // big bullet
                 // Calculate the direction to the player
                 Vector3 BigBulletDirection = playerTransform.position - this.transform.position;
-                BigBulletDirection.Normalize(); 
+                BigBulletDirection.Normalize();
+                //set the animation back to idle
+                anim.SetBool("attack", false);
+                anim.SetBool("idle", true);
 
                 // Create and throw the projectile
                 GameObject bigBull = Instantiate(bigBullet, this.transform.position, Quaternion.identity);
@@ -89,7 +99,10 @@ public class Sloth : MonoBehaviour
                 // Small bullet shot
                 // Calculate the direction to the player
                 Vector3 shotgunBulletDirection = playerTransform.position - this.transform.position;
-                shotgunBulletDirection.Normalize(); 
+                shotgunBulletDirection.Normalize();
+                //set the animation back to idle
+                anim.SetBool("attack", false);
+                anim.SetBool("idle", true);
 
                 // Create and throw the small rock projectiles
                 for (int i = 0; i < 6; i++)
@@ -108,6 +121,7 @@ public class Sloth : MonoBehaviour
                 break;
 
         }
+        
     }
 
     private void OnCollisionEnter(Collision collision)

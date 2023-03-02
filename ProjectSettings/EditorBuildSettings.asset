@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/You Died Screen.unity
     guid: c38aeebbc7cce5243897d0c727891329
   - enabled: 1
+    path: Assets/Ethan's Shit/Win Room.unity
+    guid: a85c7e9452b8404418f3cd67f8c133f8
+  - enabled: 1
     path: Assets/Scenes/YouWin.unity
     guid: 7e4e450701f4a2b4091b16615c6c452c
   m_configObjects: {}

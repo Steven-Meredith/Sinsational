@@ -13,7 +13,6 @@
     - fire 
     - buttons
     - appearing/disappearing walls
-    - 
 - Get animations done
 - Implement win case scene
 - Get more music?

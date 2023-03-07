@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1796416517596073019}
   - component: {fileID: 1796416517596073018}
   - component: {fileID: 1796416517596073021}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bullet 1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 8871374344581207158}
   - component: {fileID: 9126083673273411733}
   - component: {fileID: 7121040465154708222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 6999952536765107073}
   - component: {fileID: 4204248578349133717}
   - component: {fileID: 3989608189265296154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 4959750460235994638}
   - component: {fileID: 5951026272473658490}
   - component: {fileID: 8871454599795768032}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 5002916694710623982}
   - component: {fileID: 2443665719900511278}
   - component: {fileID: 8849507364450575493}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

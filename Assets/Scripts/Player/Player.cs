@@ -7,12 +7,13 @@ public class Player : MonoBehaviour
 {
     public Rigidbody rb;
     public float speed = 5;
+    public float onIceSpeed = 6;
     public Camera cam;
     Ray ray;
     RaycastHit hit;
     Animator anim;
 
-
+    public bool onIce=false;
     float dashCounter = 0;
 
     bool dashing;
@@ -40,42 +41,72 @@ public class Player : MonoBehaviour
         anim.SetBool("Walking", false);
         //Debug.Log(hit.point.x+","+hit.point.y+"," + hit.point.z);
 
-        if (Input.GetKey(KeyCode.W))
+        if (onIce)
         {
-            //rb.AddForce(Vector3.forward*speed,ForceMode.Force);
-            z += speed;
-            anim.SetBool("Walking", true);
+            if (Input.GetKey(KeyCode.W))
+            {
+                rb.AddForce(Vector3.forward* onIceSpeed, ForceMode.Force);
+                anim.SetBool("Walking", true);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                rb.AddForce(-Vector3.forward * onIceSpeed, ForceMode.Force);
+                anim.SetBool("Walking", true);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb.AddForce(-Vector3.right * onIceSpeed, ForceMode.Force);
+                anim.SetBool("Walking", true);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                rb.AddForce(Vector3.right * onIceSpeed, ForceMode.Force);
+                anim.SetBool("Walking", true);
+            }
+
+
         }
-        if (Input.GetKey(KeyCode.S))
+        else
         {
-            // rb.AddForce(-Vector3.forward * speed, ForceMode.Force);
-            z -= speed;
-            anim.SetBool("Walking", true);
+            if (Input.GetKey(KeyCode.W))
+            {
+                //rb.AddForce(Vector3.forward*speed,ForceMode.Force);
+                z += speed;
+                anim.SetBool("Walking", true);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                // rb.AddForce(-Vector3.forward * speed, ForceMode.Force);
+                z -= speed;
+                anim.SetBool("Walking", true);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                //rb.AddForce(-Vector3.right * speed, ForceMode.Force);
+                x -= speed;
+                anim.SetBool("Walking", true);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                //rb.AddForce(Vector3.right * speed, ForceMode.Force);
+                x += speed;
+                anim.SetBool("Walking", true);
+            }
+
+            if (!dashing)
+            {
+                rb.velocity = new Vector3(x, y, z);
+            }
         }
-        if (Input.GetKey(KeyCode.A))
-        {
-            //rb.AddForce(-Vector3.right * speed, ForceMode.Force);
-            x -= speed;
-            anim.SetBool("Walking", true);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            //rb.AddForce(Vector3.right * speed, ForceMode.Force);
-            x += speed;
-            anim.SetBool("Walking", true);
-        }
+
+
 
         if (Input.GetKeyDown(KeyCode.Space) && dashCounter >= 0)
         {
             StartCoroutine(dash());
         }
 
-        if (!dashing)
-        {
-            rb.velocity = new Vector3(x, y, z);
-        }
-
-        
+   
         transform.LookAt(new Vector3(hit.point.x, transform.position.y + 0.05f, hit.point.z));
 
     }
@@ -105,6 +136,33 @@ public class Player : MonoBehaviour
             Debug.Log("set");
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name.Contains("Ice"))
+        {
+            onIce = true;
+        }
+        if (collision.gameObject.name.Contains("sticky"))
+        {
+            speed = 0.5f * speed;
+        }
+
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.name.Contains("Ice"))
+        {
+            onIce = false;
+        }
+        if (collision.gameObject.name.Contains("sticky"))
+        {
+            speed = 2.0f * speed;
+        }
+    }
+
+   
 
 
 }

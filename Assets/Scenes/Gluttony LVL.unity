@@ -5997,10 +5997,18 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1543544109}
+    - target: {fileID: 4418555203947073800, guid: 4f89fb0f033c3104b8b15ee93fcd0507, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4418555203947073801, guid: 4f89fb0f033c3104b8b15ee93fcd0507, type: 3}
       propertyPath: box
       value: 
       objectReference: {fileID: 1280972936}
+    - target: {fileID: 4418555203947073803, guid: 4f89fb0f033c3104b8b15ee93fcd0507, type: 3}
+      propertyPath: m_Drag
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f89fb0f033c3104b8b15ee93fcd0507, type: 3}
 --- !u!114 &69169765 stripped
@@ -35652,7 +35660,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24492
+  m_Name: pb_Mesh23184
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45286,7 +45294,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25570
+  m_Name: pb_Mesh24262
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -54271,7 +54279,7 @@ GameObject:
   - component: {fileID: 1187233307}
   - component: {fileID: 1187233306}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92238,7 +92246,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25784
+  m_Name: pb_Mesh24476
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

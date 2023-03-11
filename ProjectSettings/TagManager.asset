@@ -18,6 +18,7 @@ TagManager:
   - Temp Spawn
   - Big Boulder
   - Mirror
+  - Bounce
   layers:
   - Default
   - TransparentFX

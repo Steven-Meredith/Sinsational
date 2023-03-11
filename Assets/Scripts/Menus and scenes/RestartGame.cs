@@ -12,12 +12,31 @@ public class RestartGame : MonoBehaviour
         if (SceneChecker.curLevel == "SlothLevel1")
         {
             SceneManager.LoadScene("SlothLevel1");
-            
+
         }
-        else if(SceneChecker.curLevel == "ROD")
+        else if (SceneChecker.curLevel == "ROD")
         {
             SceneManager.LoadScene("ROD");
-            
+
+        }
+        else if (SceneChecker.curLevel == "Gluttony LVL")
+        {
+            SceneManager.LoadScene("Gluttony LVL");
+        }
+        else if (SceneChecker.curLevel == "SlothBoss")
+        {
+            SceneManager.LoadScene("SlothBoss");
+
+        }
+        else if (SceneChecker.curLevel == "Level1")
+        {
+            SceneManager.LoadScene("Level1");
+
+        }
+        else if (SceneChecker.curLevel == "bossLevel")
+        {
+            SceneManager.LoadScene("bossLevel");
+
         }
         PlayerHp.ResetPlayer(5);
     }

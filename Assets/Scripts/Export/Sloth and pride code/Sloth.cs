@@ -129,7 +129,7 @@ public class Sloth : MonoBehaviour
         if (collision.collider.tag == "Bullet")
         {
             hp--;
-
+            DevilsBlood.Play();
 
             if (hp <= 5 && hp > 0)
             {

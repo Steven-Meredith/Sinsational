@@ -29,6 +29,7 @@ public class BulletBehavior : MonoBehaviour
             direction = Vector3.Reflect(lastVel.normalized, collision.contacts[0].normal);
 
             rb.velocity = direction * Mathf.Max(speed, 0);
+
         }
 
 

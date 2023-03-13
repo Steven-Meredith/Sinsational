@@ -8,7 +8,7 @@ public class PlayerHp : MonoBehaviour
 {
     public static int hp = 5;
     [SerializeField] BoxCollider box;
-    [SerializeField] ParticleSystem AngelBood;
+    [SerializeField] ParticleSystem AngelBlood;
     [SerializeField] List<Image> UIHealth;
     int hpNorm = hp;
     Transform tempSpawn;
@@ -35,7 +35,7 @@ public class PlayerHp : MonoBehaviour
         if (hp != hpNorm && hp != 0)
         {
             CheckHp();
-            AngelBood.Play();
+            AngelBlood.Play();
             hpNorm = hp;
         }
     }

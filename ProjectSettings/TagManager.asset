@@ -19,6 +19,7 @@ TagManager:
   - Big Boulder
   - Mirror
   - Bounce
+  - Barrier
   layers:
   - Default
   - TransparentFX
@@ -35,7 +36,7 @@ TagManager:
   - Spike
   - BigBoulder
   - smallBoulder
-  - 
+  - barrier
   - 
   - 
   - 

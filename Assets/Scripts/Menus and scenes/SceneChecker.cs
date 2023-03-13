@@ -12,12 +12,31 @@ public class SceneChecker : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "SlothLevel1")
         {
             curLevel = "SlothLevel1";
-            Debug.Log("sloth");
+            
         }
         else if(SceneManager.GetActiveScene().name == "ROD")
         {
             curLevel = "ROD";
-            Debug.Log("ROD");
+            
+        }
+        else if (SceneManager.GetActiveScene().name == "Gluttony LVL")
+        {
+            curLevel = "Gluttony LVL";
+            
+        }
+        else if(SceneManager.GetActiveScene().name == "SlothBoss")
+        {
+            curLevel = "SlothBoss";
+        }
+        if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            curLevel = "Level1";
+
+        }
+        if (SceneManager.GetActiveScene().name == "bossLevel")
+        {
+            curLevel = "bossLevel";
+
         }
         else
         {

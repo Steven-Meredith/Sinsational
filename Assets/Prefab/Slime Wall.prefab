@@ -576,9 +576,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7750831461977254352}
+  - component: {fileID: -3275704203210814226}
   m_Layer: 0
   m_Name: Slime Wall
-  m_TagString: Untagged
+  m_TagString: Bounce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -608,6 +609,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &-3275704203210814226
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979361759461323626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.848587, y: 5.4872437, z: 9.687592}
+  m_Center: {x: -1.4521561, y: 3.4083252, z: 0.20832825}
 --- !u!1 &7152063558335072597
 GameObject:
   m_ObjectHideFlags: 0

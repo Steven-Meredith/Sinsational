@@ -26,6 +26,7 @@ public class CamBeha : MonoBehaviour
         camPos.x = Mathf.Clamp(camPos.x, -drag + pla.transform.position.x, drag + pla.transform.position.x);
         camPos.y = 13 + pla.transform.position.y;
         camPos.z = Mathf.Clamp(camPos.z, -drag + pla.transform.position.z, drag + pla.transform.position.z);
+        camPos = Vector3.Lerp(this.transform.position, camPos, Time.deltaTime * 3);
     }
     private void LateUpdate()
     {
